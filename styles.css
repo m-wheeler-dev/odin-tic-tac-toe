@@ -1,6 +1,13 @@
 /* GOOGLE FONT IMPORT [RALEWAY] */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap");
 
+/* VARIABLES */
+:root {
+	--border: 2px solid #ff0099;
+	--radius: 15px;
+	--shadow: 0 0 0.75rem #ff0099;
+}
+
 /* DEFAULTS */
 * {
 	margin: 0;
@@ -15,10 +22,70 @@ body {
 	color: #fff;
 	background-color: #202020;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-h1 {
-	margin-top: 1rem;
+h1,
+h2 {
+	height: 3rem;
+	margin-top: 2rem;
 	text-align: center;
 	font-weight: 300;
+}
+
+/* FLEX DISPLAY & CENTER */
+.container,
+.block {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.container {
+	height: 50%;
+	width: 50%;
+	margin: 1rem auto;
+	padding: 0.25rem;
+	border: var(--border);
+	border-radius: var(--radius);
+	overflow: hidden;
+}
+
+.block {
+	cursor: pointer;
+	height: 32%;
+	width: 32%;
+	font-size: 7rem;
+	color: #ff0099;
+	background-color: #000;
+	border-radius: var(--radius);
+}
+
+.block:hover {
+	opacity: 0.8;
+	box-shadow: var(--shadow);
+}
+
+#restart {
+	cursor: pointer;
+	height: 3rem;
+	width: 7rem;
+	margin-top: 2rem;
+	font-size: 1rem;
+	font-weight: 300;
+	color: #fff;
+	background-color: transparent;
+	border: var(--border);
+	border-radius: var(--radius);
+	transition: all 0.25s linear;
+}
+
+#restart:hover {
+	background-color: #000;
+	font-weight: 400;
+	box-shadow: var(--shadow);
+	transform: scale(1.1);
 }
